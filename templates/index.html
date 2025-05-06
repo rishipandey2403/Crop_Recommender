@@ -111,15 +111,16 @@
             data: $(this).serialize(),
             dataType: 'json',
             success: function(response) {
-              if(response.status === 'success') {
-                $('#resultContainer').html(`
-                  <div class="card bg-dark text-white mt-4" id="resultCard">
-                    <div class="card-body text-center">
-                      <h4>Recommended Crop:</h4>
-                      <p class="display-6">${response.result}</p>
-                    </div>
+            if(response.status === 'success') {
+              $('#resultContainer').html(`
+                <div class="card bg-dark text-white mt-4" id="resultCard">
+                  <img src="/static/img.jpg" class="card-img-top" alt="Recommended Crop">
+                  <div class="card-body text-center">
+                    <h4>Recommended Crop:</h4>
+                    <p class="display-6">${response.result}</p>
                   </div>
-                `);
+                </div>
+              `);
               } else {
                 $('#resultContainer').html(`
                   <div class="alert alert-danger mt-4">
