@@ -11,7 +11,7 @@ print("Templates exists:", os.path.exists('templates/index.html'))
 app = Flask(__name__)
 
 # Load and prepare data
-crop = pd.read_csv('.venv/Crop_recommendation.csv')
+crop = pd.read_csv('Crop_recommendation.csv')
 
 # Create label mapping (same as your original)
 crop_dict = {
